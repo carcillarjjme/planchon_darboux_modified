@@ -1,4 +1,4 @@
-# An Implementation of the Modified Planchon Darboux Algorithm
+# An Implementation of the Modified Planchon and Darboux Algorithm
 
 The script accepts a **.npy** file containing the Digital Elvation Model (DEM) from **numpy** array of data type **np.float64**. The output is the resulting sink-filled DEM using the modified Planchon-Darboux Algorithm by [Wei, Zhou, & Dong](https://www.mdpi.com/2220-9964/8/4/164) (2019).
 
