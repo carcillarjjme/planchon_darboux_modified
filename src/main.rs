@@ -3,7 +3,7 @@ use ndarray_npy::{ReadNpyError, ReadNpyExt, WriteNpyExt};
 use ndarray_stats::{QuantileExt,errors::MinMaxError};
 use std::fs::File;
 use std::collections::VecDeque;
-
+use std::time::Instant;
 use std::env;
 use std::io::BufWriter;
 
@@ -142,8 +142,7 @@ fn planchon_darboux_alg(filename: &String,epsilon:f64,outputfile: &String) -> Re
 }
 
 fn main() {
-    use std::time::Instant;
-
+    
     //command line arguments
     let args: Vec<String> = env::args().collect();
     
