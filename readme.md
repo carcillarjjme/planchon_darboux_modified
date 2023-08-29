@@ -9,12 +9,7 @@ The algorithm uses a similar priority queue and regular queue approach as the or
 ## Usage
 Clone the repository and run the following command in the terminal:
 ```cmd
-cargo run <dem.npy> <0.0001> <outputfile.npy>
-```
-
-Or use the much faster release build:
-```cmd
-planchon_darboux <dem.npy> <epsilon> <outputfile.npy>
+cargo run --release <dem.npy> <epsilon> <outputfile.npy>
 ```
 
 ## General Idea
