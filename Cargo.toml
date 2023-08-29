@@ -7,6 +7,18 @@ repository = "https://github.com/carcillarjjme/planchon_darboux_modified"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
+[profile.release]
+opt-level = 3
+codegen-units = 1
+lto = true
+panic = "abort"
+strip = "debuginfo"
+debug = false
+debug-assertions = false
+overflow-checks = false
+incremental = false
+
+
 [dependencies]
 ndarray = "0.15.6"
 ndarray-npy = "0.8.1"
