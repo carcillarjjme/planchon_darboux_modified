@@ -15,7 +15,6 @@ struct Cell {
     is_boundary: bool,
 }
 
-
 fn planchon_darboux_alg(filename: &String,epsilon:f64,outputfile: &String) -> Result<(), ReadNpyError> {
     let reader = File::open(&filename)?;
     let dem:Array2<f64>= Array2::<f64>::read_npy(reader)?;
@@ -89,6 +88,7 @@ fn planchon_darboux_alg(filename: &String,epsilon:f64,outputfile: &String) -> Re
         if priority.len() > 0 {
             cell =  priority.pop_front().unwrap();
         } else {
+            
             cell = queue.pop_front().unwrap();
             let cell_dem:f64 = dem[[cell.row as usize,cell.col as usize]];
             let cell_water:f64 = filled_dem[[cell.row as usize,cell.col as usize]];
